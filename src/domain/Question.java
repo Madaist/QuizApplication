@@ -1,11 +1,15 @@
+package domain;
+
 import java.util.ArrayList;
 
 public class Question {
 
     private int questionID;
-    String content;
+    private String content;
     private int score;
     ArrayList<String> answers;
+
+    public Question(){}
 
     public Question(int questionID, String content, int score, ArrayList<String> answers) {
         this.questionID = questionID;

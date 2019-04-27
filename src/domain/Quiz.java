@@ -1,15 +1,16 @@
+package domain;
+
+import domain.Question;
+
 import java.util.ArrayList;
 
 public class Quiz {
     private ArrayList<Question> questions;
-    private ArrayList<Answer> answers;
     private int numberOfQuestions;
     private String description;
     private String category;
-    private String ID;
-    private String name;
-
-    public void calculateScore(){};
+    private int quizId;
+    private String quizName;
 
     public ArrayList<Question> getQuestions() {
         return questions;
@@ -19,20 +20,12 @@ public class Quiz {
         this.questions = questions;
     }
 
-    public ArrayList<Answer> getAnswers() {
-        return answers;
-    }
-
-    public void setAnswers(ArrayList<Answer> answers) {
-        this.answers = answers;
-    }
-
     public int getNumberOfQuestions() {
         return numberOfQuestions;
     }
 
-    public void setNumberQuestions(int numberQuestions) {
-        this.numberOfQuestions = numberQuestions;
+    public void setNumberOfQuestions(int numberOfQuestions) {
+        this.numberOfQuestions = numberOfQuestions;
     }
 
     public String getDescription() {
@@ -49,5 +42,21 @@ public class Quiz {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public int getQuizId() {
+        return quizId;
+    }
+
+    public void setQuizId(int quizId) {
+        this.quizId = quizId;
+    }
+
+    public String getQuizName() {
+        return quizName;
+    }
+
+    public void setQuizName(String quizName) {
+        this.quizName = quizName;
     }
 }
