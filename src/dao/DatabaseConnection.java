@@ -1,6 +1,7 @@
 package dao;
 
 import domain.Question;
+import domain.Quiz;
 import domain.Score;
 import domain.User;
 import services.DatabaseData;
@@ -156,22 +157,20 @@ public class DatabaseConnection {
     }
 
 
-    public static ArrayList<Integer> getQuizIdByName(String name){
+    public static int getQuizIdByName(String name){
+        int quizId = -1;
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizIdByName)){
             statement.setString(1, name);
-            ArrayList<Integer> quizzes = new ArrayList<>();
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                int quizId = resultSet.getInt("ID");
-                quizzes.add(quizId);
+                  quizId = resultSet.getInt("ID");
             }
             resultSet.close();
             close();
-            return quizzes;
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return quizId;
     }
 
 
@@ -249,6 +248,36 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
         return scores;
+    }
+
+    public static void insertQuiz(Quiz quiz){
+        try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertQuiz)){
+            statement.setString(1, quiz.getCategory());
+            statement.setString(2, quiz.getDescription());
+            statement.setInt(3, quiz.getNumberOfQuestions());
+            statement.setString(4, quiz.getQuizName());
+            statement.executeUpdate();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static  void insertQuestion(Question question){
+        try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertQuestion)){
+            statement.setString(1, question.getContent());
+            statement.setInt(2, question.getQuizId());
+            statement.setInt(3, question.getScore());
+            int k = 4;
+            for(int i = 0; i < question.getAnswers().size()-1; i++){
+                statement.setString(k, question.getAnswers().get(i));
+                k++;
+            }
+            statement.setString(8, question.getAnswers().get(question.getAnswers().size()-1));
+            statement.executeUpdate();
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 
 

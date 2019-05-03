@@ -14,6 +14,8 @@ public interface DatabaseData {
     String insertScore = "INSERT INTO score_table(score, user_id, quiz_id) VALUES (?, ?, ?)";
     String selectScore = "SELECT * FROM score_table ORDER BY score DESC";
     String selectUserByUserId = "SELECT * FROM user WHERE user_id = ?";
+    String insertQuiz = "INSERT INTO quiz(category, description, number_questions,name) VALUES (?,?,?,?)";
+    String insertQuestion = "INSERT INTO questions (content, quiz_id, question_score, answer_a, answer_b, answer_c, answer_d, right_answer) VALUES(?,?,?,?,?,?,?,?)";
 
 
 

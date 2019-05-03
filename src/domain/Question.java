@@ -8,6 +8,7 @@ public class Question {
     private String content;
     private int score;
     ArrayList<String> answers;
+    private int quizId;
 
     public Question(){}
 
@@ -48,5 +49,13 @@ public class Question {
 
     public void setAnswers(ArrayList<String> answers) {
         this.answers = answers;
+    }
+
+    public int getQuizId() {
+        return quizId;
+    }
+
+    public void setQuizId(int quizId) {
+        this.quizId = quizId;
     }
 }

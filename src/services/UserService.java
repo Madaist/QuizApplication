@@ -135,15 +135,9 @@ public class UserService {
             case 3: {
                 System.out.println("Insert the name: ");
                 String name = sc.next();
-                ArrayList<Integer> ids = DatabaseConnection.getQuizIdByName(name);
-                ArrayList<String> quizNames = new ArrayList<>();
-                for (int i = 0; i < ids.size(); i++)
-                    quizNames.add(DatabaseConnection.getQuizName(ids.get(i)));
-                for (int i = 0; i < quizNames.size(); i++) {
-                    System.out.print("Nume: " + quizNames.get(i) + ". ID:  " + ids.get(i) + "\n");
-                }
-                System.out.println("Insert quiz id: ");
-                int quizId = sc.nextInt();
+                int quizId = DatabaseConnection.getQuizIdByName(name);
+                String quizName = DatabaseConnection.getQuizName(quizId);
+                System.out.print("Nume: " + quizName + ". ID:  " + quizId + "\n");
                 int userScore = calculateScore(quizId);
                 System.out.println(userScore);
                 int userId = user.getID();
