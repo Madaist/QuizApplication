@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QuizApplication</title>
+    <title>QuizApplication - Main Page</title>
     <link rel="stylesheet" href="css/mainPage.css">
 </head>
 
@@ -52,7 +52,7 @@
         <p>Don't have an account?<br>
            Don't miss all the fun!<br>
             Register now. :) </p>
-        
+
         <form action="/QuizApplication/web/register.jsp">
             <input type="submit" value="Register" />
         </form>
@@ -63,10 +63,6 @@
     </div>
 
 </div>
-
-
-
-
 
 </body>
 
