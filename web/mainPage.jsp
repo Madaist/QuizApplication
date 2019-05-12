@@ -1,3 +1,4 @@
+
 <!DOCTYPE>
 <html>
 <head>
@@ -15,9 +16,11 @@
     </div>
 </div>
 
-<!--casuta de login-->
-<div class="login-text">
-    <p>Already have an account? <br>
+
+<div id="textbox">
+    <!--casuta de login-->
+    <div class="login-text">
+         <p>Already have an account? <br>
     Do you feel lucky? <br>
     Login and have fun! </p>
 
@@ -27,11 +30,13 @@
             <div>
                 <label for="uname">Username: </label>
                 <input  type="text" placeholder="Enter Username" name="uname" id = "uname" required >
+                <% String userLogin = request.getParameter("uname"); %>
             </div>
 
             <div>
                 <label for="psw">Password: </label>
                 <input type="password" placeholder="Enter Password" name="psw" id = "psw" required>
+                <% String passwordLogin = request.getParameter("psw"); %>
             </div>
 
             <div>
@@ -41,8 +46,22 @@
     </form>
 </div>
 
+    <!-- casuta de register -->
+    <div class="register-text">
+        <p>Don't have an account?<br>
+           Don't miss all the fun!<br>
+            Register now. :) </p>
+        <!--<button type="button" onclick="register.jsp">Register</button> -->
+        <form action="/register.jsp">
+            <input type="submit" value="Register" />
+        </form>
+    </div>
 
+    <div class="animated-gif">
+        <img src="css/gallery/blank-paper.gif" alt = "quiz gif">
+    </div>
 
+</div>
 
 
 

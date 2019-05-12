@@ -15,6 +15,7 @@ h1 {
     position: relative;
 }
 
+
 .hero-text {
     text-align: center;
     position: absolute;
@@ -24,11 +25,26 @@ h1 {
     color: coral;
 }
 
+
 .login-text{
 
-    left: 50%;
+    float: left;
     color: darkblue;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
+.register-text{
+
+    float: right;
+    color: darkblue;
+    font-size: 25px;
+}
+
+animated-gif{
+
+    width: 1px;
+    height: 1px;
+    position: center;
+
+}

@@ -4,6 +4,8 @@ import dao.DatabaseConnection;
 import domain.Question;
 import domain.User;
 
+import javax.servlet.http.HttpServletRequest;
+import java.net.http.HttpRequest;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,12 +38,13 @@ public class UserService {
         DatabaseConnection.insertUser(user);
     }
 
-    public static void login() {
+    public static void login(String userLogin, String passwordLogin) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Username: ");
+       /* System.out.println("Username: ");
         String userLogin = sc.next();
         System.out.println("Password: ");
-        String passwordLogin = sc.next();
+        String passwordLogin = sc.next(); */
+
 
         ArrayList<String> usernames = DatabaseConnection.getAllUsernames();
         while (!usernames.contains(userLogin)) {
@@ -68,7 +71,7 @@ public class UserService {
             char letter = 'a';
             int k;
             for (k = 0; k < questions.get(i).getAnswers().size() - 1; k++) {
-                System.out.println(letter + ". " + questions.get(i).getAnswers().get(k));
+                System.out.println(letter + " " + questions.get(i).getAnswers().get(k));
                 letter++;
             }
             correctAnswers.add(questions.get(i).getAnswers().get(k).charAt(0));

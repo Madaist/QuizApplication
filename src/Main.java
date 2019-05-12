@@ -1,4 +1,3 @@
-import domain.User;
 import services.AdminService;
 import services.UserService;
 
@@ -9,8 +8,6 @@ public class Main {
         //ce mai trebuie sa facem:
         //afisarea raspunsurilor corecte/ gresite
 
-
-        AdminService.createQuiz();
 
 
     }
