@@ -41,10 +41,11 @@ h1 {
     font-size: 25px;
 }
 
-animated-gif{
+.animated-gif{
 
-    width: 1px;
-    height: 1px;
-    position: center;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 35%;
 
 }

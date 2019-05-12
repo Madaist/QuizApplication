@@ -17,12 +17,12 @@
 </div>
 
 
-<div id="textbox">
+<div>
     <!--casuta de login-->
     <div class="login-text">
          <p>Already have an account? <br>
-    Do you feel lucky? <br>
-    Login and have fun! </p>
+            Do you feel lucky? <br>
+            Login and have fun! </p>
 
     <form action = "http://localhost:8080/QuizApplication/web/mainPage.jsp" method = "POST">
 
@@ -42,6 +42,7 @@
             <div>
                 <button class = "btn" type="submit" name="action">Login</button>
             </div>
+
         </div>
     </form>
 </div>
@@ -51,8 +52,8 @@
         <p>Don't have an account?<br>
            Don't miss all the fun!<br>
             Register now. :) </p>
-        <!--<button type="button" onclick="register.jsp">Register</button> -->
-        <form action="/register.jsp">
+        
+        <form action="/QuizApplication/web/register.jsp">
             <input type="submit" value="Register" />
         </form>
     </div>
