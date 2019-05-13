@@ -8,7 +8,7 @@ public class Quiz {
     private ArrayList<Question> questions;
     private int numberOfQuestions;
     private String description;
-    private String category;
+    private int categoryId;
     private int quizId;
     private String quizName;
 
@@ -36,12 +36,12 @@ public class Quiz {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public int getQuizId() {

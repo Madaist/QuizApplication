@@ -14,7 +14,7 @@ public class AdminService {
         Scanner sc = new Scanner(System.in);
         Quiz quiz = new Quiz();
         System.out.println("Insert quiz category: ");
-        quiz.setCategory(sc.next());
+        quiz.setCategoryId(sc.nextInt());
         sc.nextLine();
         System.out.println("Insert quiz description");
         quiz.setDescription(sc.nextLine());

@@ -34,8 +34,10 @@ body{
 .container{
     text-align: center;
     font-size: 23px;
-   /* display: flex; */
+    /*display: flex; */
     align-items: center;
     vertical-align: middle;
+
 }
+
 

@@ -50,6 +50,7 @@
         <button class = "btn" type="submit" name="action">Register</button>
     </div>
 
+
 </div>
 
 </body>

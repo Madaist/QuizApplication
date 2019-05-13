@@ -1,17 +1,19 @@
 package services;
 
 import dao.DatabaseConnection;
+import domain.Category;
 import domain.Question;
 import domain.User;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.net.http.HttpRequest;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserService {
 
-    public static void createAccount(){
+    public static void createAccount(HttpSession session){
         User user = new User();
         Scanner sc = new Scanner(System.in);
         System.out.println("Last name: ");
@@ -36,9 +38,10 @@ public class UserService {
         }
 
         DatabaseConnection.insertUser(user);
+        session.setAttribute("userId", user.getID());
     }
 
-    public static void login(String userLogin, String passwordLogin) {
+    public static void login(String userLogin, String passwordLogin, HttpSession session) {
         Scanner sc = new Scanner(System.in);
        /* System.out.println("Username: ");
         String userLogin = sc.next();
@@ -56,6 +59,9 @@ public class UserService {
             System.out.println("Password is not correct. Please insert your password again.");
             passwordLogin = sc.next();
         }
+
+        User user = DatabaseConnection.selectUser(userLogin);
+        session.setAttribute("userId", user.getID());
     }
 
 
@@ -92,8 +98,9 @@ public class UserService {
 
 
 
-    public static void takeQuiz(User user) {
+    public static void takeQuiz(HttpSession session) {
 
+        int userId = (Integer)session.getAttribute("userId");
         System.out.println("Find quiz by: 1 - description, 2 - category, 3 - name");
         Scanner sc = new Scanner(System.in);
         int option = sc.nextInt();
@@ -112,15 +119,18 @@ public class UserService {
                 int quizId = sc.nextInt();
                 int userScore = calculateScore(quizId);
                 System.out.println(userScore);
-                int userId = user.getID();
                 DatabaseConnection.insertScore(userScore, userId, quizId);
 
                 break;
             }
             case 2: {
-                System.out.println("Insert category: ");
-                String category = sc.next();
-                ArrayList<Integer> ids = DatabaseConnection.getQuizIdByCategory(category);
+                ArrayList<Category> categories = DatabaseConnection.selectCategories();
+                for(Category category : categories)
+                    System.out.println(category);
+
+                System.out.println("Insert category id: ");
+                int categoryId = sc.nextInt();
+                ArrayList<Integer> ids = DatabaseConnection.getQuizIdByCategory(categoryId);
                 ArrayList<String> quizNames = new ArrayList<>();
                 for (int i = 0; i < ids.size(); i++)
                     quizNames.add(DatabaseConnection.getQuizName(ids.get(i)));
@@ -131,7 +141,6 @@ public class UserService {
                 int quizId = sc.nextInt();
                 int userScore = calculateScore(quizId);
                 System.out.println(userScore);
-                int userId = user.getID();
                 DatabaseConnection.insertScore(userScore, userId, quizId);
                 break;
             }
@@ -143,7 +152,6 @@ public class UserService {
                 System.out.print("Nume: " + quizName + ". ID:  " + quizId + "\n");
                 int userScore = calculateScore(quizId);
                 System.out.println(userScore);
-                int userId = user.getID();
                 DatabaseConnection.insertScore(userScore, userId, quizId);
                 break;
             }

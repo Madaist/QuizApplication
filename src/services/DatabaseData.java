@@ -6,7 +6,7 @@ public interface DatabaseData {
     String insertUser = "INSERT INTO user(username, last_name, first_name, phone_number, password) VALUES(?, ?, ?, ?, ?)";
     String selectPassword = "SELECT password FROM user where username = ?";
     String selectQuizIdByDescription = "SELECT id FROM quiz where description = ? ";
-    String selectQuizIdByCategory = "SELECT id FROM quiz where category = ? ";
+    String selectQuizIdByCategory = "SELECT id FROM quiz where category_id = ? ";
     String selectQuizIdByName = "SELECT id FROM quiz where name = ? ";
     String selectQuizNameById = "SELECT name FROM quiz WHERE id = ?";
     String selectQuestionsByQuizId = "SELECT * FROM questions WHERE quiz_id = ?";
@@ -16,7 +16,8 @@ public interface DatabaseData {
     String selectUserByUserId = "SELECT * FROM user WHERE user_id = ?";
     String insertQuiz = "INSERT INTO quiz(category, description, number_questions,name) VALUES (?,?,?,?)";
     String insertQuestion = "INSERT INTO questions (content, quiz_id, question_score, answer_a, answer_b, answer_c, answer_d, right_answer) VALUES(?,?,?,?,?,?,?,?)";
-
+    String selectCategories = "SELECT * FROM category";
+    String insertCategory = "INSERT INTO category (category_name) VALUES (?)";
 
 
 

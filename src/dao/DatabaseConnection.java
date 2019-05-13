@@ -1,9 +1,6 @@
 package dao;
 
-import domain.Question;
-import domain.Quiz;
-import domain.Score;
-import domain.User;
+import domain.*;
 import services.DatabaseData;
 import java.sql.*;
 import java.util.ArrayList;
@@ -121,9 +118,9 @@ public class DatabaseConnection {
     }
 
     public static  ArrayList<Integer> getQuizIdByDescription(String description){
+        ArrayList<Integer> quizzes = new ArrayList<>();
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizIdByDescription)){
             statement.setString(1, description);
-            ArrayList<Integer> quizzes = new ArrayList<>();
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
                 int quizId = resultSet.getInt("ID");
@@ -131,17 +128,16 @@ public class DatabaseConnection {
             }
             resultSet.close();
             close();
-            return quizzes;
         } catch (SQLException e){
             e.printStackTrace();
         }
-        return null;
+        return quizzes;
     }
 
-    public static ArrayList<Integer> getQuizIdByCategory(String category){
+    public static ArrayList<Integer> getQuizIdByCategory(int categoryId){
+        ArrayList<Integer> quizzes = new ArrayList<>();
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizIdByCategory)){
-            statement.setString(1, category);
-            ArrayList<Integer> quizzes = new ArrayList<>();
+            statement.setInt(1, categoryId);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
                 int quizId = resultSet.getInt("ID");
@@ -149,11 +145,10 @@ public class DatabaseConnection {
             }
             resultSet.close();
             close();
-            return quizzes;
         } catch (SQLException e){
             e.printStackTrace();
         }
-        return null;
+        return quizzes;
     }
 
 
@@ -191,10 +186,10 @@ public class DatabaseConnection {
     }
 
     public static ArrayList<Question> getQuestions(int quizId){
+        ArrayList<Question> questions = new ArrayList<>();
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuestionsByQuizId)){
             statement.setInt(1, quizId);
             ResultSet resultSet = statement.executeQuery();
-            ArrayList<Question> questions = new ArrayList<>();
             while(resultSet.next()){
                 Question question = new Question();
                 question.setQuestionID(resultSet.getInt("question_id"));
@@ -211,11 +206,10 @@ public class DatabaseConnection {
             }
             resultSet.close();
             close();
-            return questions;
         } catch(SQLException e){
             e.printStackTrace();
         }
-        return null;
+        return questions;
     }
 
 
@@ -252,7 +246,7 @@ public class DatabaseConnection {
 
     public static void insertQuiz(Quiz quiz){
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertQuiz)){
-            statement.setString(1, quiz.getCategory());
+            statement.setInt(1, quiz.getCategoryId());
             statement.setString(2, quiz.getDescription());
             statement.setInt(3, quiz.getNumberOfQuestions());
             statement.setString(4, quiz.getQuizName());
@@ -280,5 +274,29 @@ public class DatabaseConnection {
         }
     }
 
+    public static void insertCategory(Category category) {
+        try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertCategory)) {
+            statement.setString(1, category.getName());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-}
+        public static ArrayList<Category> selectCategories () {
+        ArrayList<Category> categories = new ArrayList<>();
+            try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertCategory)) {
+                ResultSet resultSet = statement.executeQuery();
+                while(resultSet.next()){
+                    int categoryId = resultSet.getInt("category_id");
+                    String categoryName = resultSet.getString("category_name");
+                    Category category = new Category(categoryId, categoryName);
+                    categories.add(category);
+                }
+             resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return  categories;
+        }
+    }
