@@ -8,16 +8,13 @@ import java.util.ArrayList;
 public class DatabaseConnection {
     private static Connection connection;
 
-
     public static Connection getConnection() {
         connection = null;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quizapplication?useSSL=false&allowPublicKeyRetrieval=true", "root", "pass123");
-            //System.out.println("Connection established");
         } catch(Exception e){
             e.printStackTrace();
-            System.out.println("Error: database connection failed");
         }
         return connection;
     }

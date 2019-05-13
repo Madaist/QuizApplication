@@ -1,3 +1,5 @@
+<%@ page import="services.UserService" %>
+<%@ page import="domain.User" %>
 <!DOCTYPE>
 <html>
 <head>
@@ -49,6 +51,7 @@
     <div>
         <button class = "btn" type="submit" name="action">Register</button>
     </div>
+
 
 
 </div>

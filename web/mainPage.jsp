@@ -1,4 +1,4 @@
-
+<%@ page import="domain.User" %>
 <!DOCTYPE>
 <html>
 <head>
@@ -24,7 +24,7 @@
             Do you feel lucky? <br>
             Login and have fun! </p>
 
-    <form action = "http://localhost:8080/QuizApplication/web/mainPage.jsp" method = "POST">
+    <form action = "http://localhost:8090/QuizApplication/web/mainPage.jsp" method = "POST">
 
         <div class="container">
             <div>
@@ -42,6 +42,7 @@
             <div>
                 <button class = "btn" type="submit" name="action">Login</button>
             </div>
+            <% User user = new User(); %>
 
         </div>
     </form>
