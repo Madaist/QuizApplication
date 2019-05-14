@@ -1,7 +1,5 @@
 package domain;
 
-import domain.Question;
-
 import java.util.ArrayList;
 
 public class Quiz {
