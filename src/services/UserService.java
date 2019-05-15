@@ -1,6 +1,9 @@
-package domain;
+package services;
 
 import dao.DatabaseConnection;
+import domain.Category;
+import domain.Question;
+import domain.User;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -9,8 +12,8 @@ import java.util.Scanner;
 
 public class UserService {
 
-    public static void createAccount(HttpSession session){
-        User user = new User();
+    public static String createAccount(User user){
+       /* User user = new User();
         Scanner sc = new Scanner(System.in);
         System.out.println("Last name: ");
         user.setLastName(sc.next());
@@ -21,35 +24,35 @@ public class UserService {
         System.out.println("Username: ");
         user.setUserName(sc.next());
         System.out.println("Password (at least 4 characters):");
-        user.setPassword(sc.next());
+        user.setPassword(sc.next());*/
 
         ArrayList<String> usernames = DatabaseConnection.getAllUsernames();
-        while (usernames.contains(user.getUserName())) {
-            System.out.println("Username already exists. Please insert another username:");
-            user.setUserName(sc.next());
+
+        if(usernames.contains(user.getUserName())) {
+            return "Username already exists. Please insert another username.";
         }
-        while (user.getPassword() == null || user.getPassword().length() < 4) {
-            System.out.println("Password has to contain at least 4 characters. Please insert another password: ");
-            user.setPassword(sc.next());
+        if(user.getPassword() == null || user.getPassword().length() < 4) {
+            return "Password has to contain at least 4 characters. Please insert another password.";
         }
 
         DatabaseConnection.insertUser(user);
-        session.setAttribute("userId", user.getID());
+        return "Account has been successfully created.";
+        //session.setAttribute("userId", user.getID());
     }
 
-    public static String login(String userLogin, String passwordLogin, HttpSession session) {
+    public static String login(String userLogin, String passwordLogin) {
 
         ArrayList<String> usernames = DatabaseConnection.getAllUsernames();
         if(!usernames.contains(userLogin)) {
-            return "Username is not correct. Please insert your username again.";
+            return "Username is not correct.\nPlease insert your username again.";
         }
 
         String password = DatabaseConnection.getPassword(userLogin);
         if (!passwordLogin.equals(password))
-            return "Password is not correct. Please insert your password again.";
+            return "Password is not correct.\nPlease insert your password again.";
 
         User user = DatabaseConnection.selectUser(userLogin);
-        session.setAttribute("userId", user.getID());
+        //session.setAttribute("userId", user.getID());
         return "Login successful";
     }
 

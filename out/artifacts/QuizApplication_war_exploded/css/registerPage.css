@@ -41,4 +41,11 @@ body{
 
 }
 
+.result{
+    color: red;
+    text-align: center;
+    /*float: bottom;
+    bottom: 5%; */
+    font-size: 15px;
+}
 

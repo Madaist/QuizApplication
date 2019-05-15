@@ -15,7 +15,7 @@
         <h1 style="font-size:100px">Register</h1>
     </div>
 </div>
-
+<form method="post" action="register">
 <div class="container">
     <div class="c1">
         <label for="lastName">Last name: </label>
@@ -46,8 +46,12 @@
         <button class = "btn" type="submit" name="action">Register</button>
     </div>
 
-
-
+</div>
+</form>
+<div id="result" class="result">
+    <pre>
+        ${requestScope.registerStatus}
+    </pre>
 </div>
 
 </body>

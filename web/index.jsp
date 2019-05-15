@@ -29,7 +29,7 @@
         Do you feel lucky? <br>
         Login and have fun! </b></p>
 
-      <form method = "get" action = "home">
+      <form method = "post" action = "home">
 
         <div class="container">
           <div>
@@ -50,13 +50,14 @@
       </form>
     </div>
 
+
     <!-- casuta de register -->
     <div class="register-text">
       <p><b>Don't have an account?<br>
         Don't miss all the fun!<br>
         Register now. :)</b> </p>
 
-      <form action="/register.jsp">
+      <form action="http://localhost:8090/QuizApplication/register.jsp">
         <input type="submit" value="Register" />
       </form>
     </div>
@@ -64,7 +65,12 @@
     <div class="animated-gif">
       <img src="css/gallery/blank-paper.gif" alt = "quiz gif">
     </div>
+  </div>
 
+  <div id="result" class="result">
+    <pre>
+      ${requestScope.loginStatus}
+    </pre>
   </div>
 
   </body>

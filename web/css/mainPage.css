@@ -54,3 +54,11 @@ h1 {
     left: 35%;
 
 }
+
+.result{
+    color: red;
+    text-align: left;
+    float: bottom;
+    bottom: 5%;
+    font-size: 15px;
+}
