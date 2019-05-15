@@ -1,0 +1,19 @@
+.quizzes-img {
+    background-image: url("gallery/quiz_hero.png");
+    height: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+body{
+    background-color: DimGrey ;
+}
+
+.result{
+    font-weight: bold;
+    font-size: 15px;
+
+}

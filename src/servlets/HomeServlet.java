@@ -19,11 +19,8 @@ public class HomeServlet extends HttpServlet {
         String loginStatus = UserService.login(username, password );
 
         if(loginStatus.equals("Login successful"))
-            resp.sendRedirect("/quizzes");
+            resp.sendRedirect("http://localhost:8090/QuizApplication/quizzes.jsp");
         else{
-            //PrintWriter out = resp.getWriter();
-            //out.println(loginStatus);
-            //out.close();
             req.setAttribute("loginStatus", loginStatus);
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }

@@ -48,6 +48,7 @@
 
 </div>
 </form>
+
 <div id="result" class="result">
     <pre>
         ${requestScope.registerStatus}

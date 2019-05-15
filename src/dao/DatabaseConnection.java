@@ -34,7 +34,7 @@ public class DatabaseConnection {
             statement.setString(2, user.getLastName());
             statement.setString(3, user.getFirstName());
             statement.setString(4, user.getPhoneNumber());
-            statement.setString(5, user.getPhoneNumber());
+            statement.setString(5, user.getPassword());
             statement.executeUpdate();
 
         }catch(SQLException e){
@@ -283,7 +283,7 @@ public class DatabaseConnection {
 
         public static ArrayList<Category> selectCategories () {
         ArrayList<Category> categories = new ArrayList<>();
-            try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertCategory)) {
+            try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectCategories)) {
                 ResultSet resultSet = statement.executeQuery();
                 while(resultSet.next()){
                     int categoryId = resultSet.getInt("category_id");
@@ -297,4 +297,35 @@ public class DatabaseConnection {
             }
             return  categories;
         }
+
+
+
+        public static ArrayList<String> selectQuizNames(){
+            ArrayList<String> quizNames = new ArrayList<>();
+            try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizNames)) {
+                ResultSet resultSet = statement.executeQuery();
+                while(resultSet.next()){
+                    quizNames.add(resultSet.getString("name"));
+                }
+                resultSet.close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return quizNames;
+        }
+
+    public static ArrayList<String> selectQuizDescriptions(){
+        ArrayList<String> quizDescriptions = new ArrayList<>();
+        try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizDescriptions)) {
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                quizDescriptions.add(resultSet.getString("description"));
+            }
+            resultSet.close();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return quizDescriptions;
+    }
+
     }

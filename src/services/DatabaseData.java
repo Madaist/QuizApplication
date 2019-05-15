@@ -18,6 +18,8 @@ public interface DatabaseData {
     String insertQuestion = "INSERT INTO questions (content, quiz_id, question_score, answer_a, answer_b, answer_c, answer_d, right_answer) VALUES(?,?,?,?,?,?,?,?)";
     String selectCategories = "SELECT * FROM category";
     String insertCategory = "INSERT INTO category (category_name) VALUES (?)";
+    String selectQuizNames = "SELECT DISTINCT name FROM quiz";
+    String selectQuizDescriptions = "SELECT description FROM quiz";
 
 
 

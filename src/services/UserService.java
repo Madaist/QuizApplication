@@ -13,18 +13,6 @@ import java.util.Scanner;
 public class UserService {
 
     public static String createAccount(User user){
-       /* User user = new User();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Last name: ");
-        user.setLastName(sc.next());
-        System.out.println("First name:");
-        user.setFirstName(sc.next());
-        System.out.println("Phone number:");
-        user.setPhoneNumber(sc.next());
-        System.out.println("Username: ");
-        user.setUserName(sc.next());
-        System.out.println("Password (at least 4 characters):");
-        user.setPassword(sc.next());*/
 
         ArrayList<String> usernames = DatabaseConnection.getAllUsernames();
 
@@ -51,7 +39,7 @@ public class UserService {
         if (!passwordLogin.equals(password))
             return "Password is not correct.\nPlease insert your password again.";
 
-        User user = DatabaseConnection.selectUser(userLogin);
+       // User user = DatabaseConnection.selectUser(userLogin);
         //session.setAttribute("userId", user.getID());
         return "Login successful";
     }

@@ -22,7 +22,7 @@ public class RegisterServlet extends HttpServlet {
         String registerStatus = UserService.createAccount(user);
 
         if(registerStatus.equals("Account has been successfully created."))
-            resp.sendRedirect("/quizzes");
+            resp.sendRedirect("http://localhost:8090/QuizApplication/quizzes.jsp");
         else {
             req.setAttribute("registerStatus", registerStatus);
             req.getRequestDispatcher("/register.jsp").forward(req, resp);

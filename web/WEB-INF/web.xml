@@ -22,4 +22,34 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowCategoriesServlet</servlet-name>
+        <servlet-class>servlets.ShowCategoriesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowCategoriesServlet</servlet-name>
+        <url-pattern>/showCategories</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowNamesServlet</servlet-name>
+        <servlet-class>servlets.ShowNamesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowNamesServlet</servlet-name>
+        <url-pattern>/showNames</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowDescriptionsServlet</servlet-name>
+        <servlet-class>servlets.ShowDescriptionsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowDescriptionsServlet</servlet-name>
+        <url-pattern>/showDescriptions</url-pattern>
+    </servlet-mapping>
 </web-app>
