@@ -11,30 +11,6 @@
 
 <div class="quizzes-img">
 </div>
-<!--
-<form method = "post" action = "findQuiz">
-
-    <div class="container">
-        <div>
-            <label for="quizCategory">Find quiz by category: </label>
-            <input  type="text" placeholder="Enter category" name="quizCategory" id = "quizCategory">
-        </div>
-
-        <div>
-            <label for="quizName">Find quiz by name: </label>
-            <input  type="text" placeholder="Enter quiz name" name="quizName" id = "quizName">
-        </div>
-
-        <div>
-            <label for="quizDescription">Find quiz by description: </label>
-            <input  type="text" placeholder="Enter quiz description" name="quizDescription" id = "quizDescription">
-        </div>
-
-
-    </div>
-</form>
--->
-
 
 <form action="http://localhost:8090/QuizApplication/showCategories" method="post">
 <input type="submit" value="Show categories of quizzes available"/>
@@ -66,6 +42,38 @@
         ${requestScope.descriptions}
     </pre>
 </div>
+
+
+
+
+
+
+
+<!--
+<form method = "post" action = "findQuiz">
+
+    <div class="container">
+        <div>
+            <label for="quizCategory">Find quiz by category: </label>
+            <input  type="text" placeholder="Enter category" name="quizCategory" id = "quizCategory">
+        </div>
+
+        <div>
+            <label for="quizName">Find quiz by name: </label>
+            <input  type="text" placeholder="Enter quiz name" name="quizName" id = "quizName">
+        </div>
+
+        <div>
+            <label for="quizDescription">Find quiz by description: </label>
+            <input  type="text" placeholder="Enter quiz description" name="quizDescription" id = "quizDescription">
+        </div>
+
+
+    </div>
+</form>
+-->
+
+
 
 </body>
 

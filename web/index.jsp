@@ -65,12 +65,14 @@
     <div class="animated-gif">
       <img src="css/gallery/blank-paper.gif" alt = "quiz gif">
     </div>
-  </div>
+
 
   <div id="result" class="result">
     <pre>
       ${requestScope.loginStatus}
     </pre>
+  </div>
+
   </div>
 
   </body>

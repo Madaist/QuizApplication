@@ -58,7 +58,8 @@ h1 {
 .result{
     color: red;
     text-align: left;
-    float: bottom;
-    bottom: 5%;
+    position: absolute;
+    bottom: 1%;
     font-size: 15px;
+    font-weight: bold;
 }
