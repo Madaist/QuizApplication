@@ -13,6 +13,7 @@
     <title>QuizApplication - Main Page</title>
     <link rel="stylesheet" href="css/mainPage.css">
   </head>
+
   <body>
   <!-- banner -->
   <div class="hero-image">

@@ -149,7 +149,6 @@ public class DatabaseConnection {
         return quizzes;
     }
 
-
     public static int getQuizIdByName(String name){
         int quizId = -1;
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizIdByName)){
@@ -297,6 +296,21 @@ public class DatabaseConnection {
             }
             return  categories;
         }
+
+    public static String selectCategoryName (int categoryId) {
+        String categoryName = null;
+        try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectCategoryNameByCategoryId)) {
+            statement.setInt(1, categoryId);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                categoryName = resultSet.getString("category_name");
+            }
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  categoryName;
+    }
 
 
 

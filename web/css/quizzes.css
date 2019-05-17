@@ -9,7 +9,8 @@
 }
 
 body{
-    background-color: DimGrey ;
+
+    background-color: dimgrey;
 }
 
 .result{
@@ -17,3 +18,24 @@ body{
     font-size: 15px;
 
 }
+
+.container1{
+    float: left;
+}
+
+
+.container2{
+    float: right;
+}
+
+/*
+.animated-gif{
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+
+}
+*/

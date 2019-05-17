@@ -20,6 +20,7 @@ public interface DatabaseData {
     String insertCategory = "INSERT INTO category (category_name) VALUES (?)";
     String selectQuizNames = "SELECT DISTINCT name FROM quiz";
     String selectQuizDescriptions = "SELECT description FROM quiz";
+    String selectCategoryNameByCategoryId = "SELECT category_name FROM category WHERE category_id = ? ";
 
 
 
