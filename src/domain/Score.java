@@ -34,4 +34,10 @@ public class Score {
     public void setQuizName(String quizName) {
         this.quizName = quizName;
     }
+
+    @Override
+    public String toString() {
+        return user.getLastName() + " " + user.getFirstName() + "                   " +
+                quizName + "                    " + score + "\n";
+    }
 }

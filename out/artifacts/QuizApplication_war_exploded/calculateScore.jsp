@@ -27,5 +27,9 @@
     </pre>
 </div>
 
+<form action="http://localhost:8090/QuizApplication/seeTop">
+    <input type="submit" value="See top" />
+</form>
+
 </body>
 </html>

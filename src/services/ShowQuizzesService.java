@@ -1,6 +1,7 @@
 package services;
 
 import domain.Category;
+import domain.Score;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,13 @@ public class ShowQuizzesService {
         for(String desc : quizDescriptions)
             stringBuffer.append(desc + "\n        ");
         return stringBuffer;
+    }
+
+    public static StringBuilder scoresArrayToString(ArrayList<Score> scores){
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Score score : scores)
+            stringBuilder.append(score);
+        return stringBuilder;
     }
 
 

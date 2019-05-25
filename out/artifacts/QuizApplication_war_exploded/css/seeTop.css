@@ -3,7 +3,7 @@ body {
 }
 
 .hero-image {
-    background-image:  url("gallery/qmark.jpg");
+    background-image: url("gallery/tagline-quiz.webp");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,16 +28,7 @@ body {
 }
 
 .result{
+    font-weight: bold;
+    font-size: 20px;
     text-align: center;
-    font-size: 150px;
-   /* position: absolute;
-    left: 50%;*/
-    transform: translate(-50%, -50%);
-    color: coral;
-    text-shadow:
-            3px 3px 0 #000,
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
 }

@@ -94,4 +94,14 @@
         <url-pattern>/calculateScore</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SeeTopServlet</servlet-name>
+        <servlet-class>servlets.SeeTopServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SeeTopServlet</servlet-name>
+        <url-pattern>/seeTop</url-pattern>
+    </servlet-mapping>
+
 </web-app>
