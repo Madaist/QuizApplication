@@ -11,13 +11,13 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class TakeQuizServlet extends HttpServlet {
+public class TakeQuizFromDescriptionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String quizName = req.getParameter("quizName");
-        int quizId = DatabaseConnection.getQuizIdByName(quizName);
+        int quizId = (int) req.getAttribute("quizId");
+        String quizName = DatabaseConnection.getQuizName(quizId);
         HttpSession session = req.getSession();
         session.setAttribute("quizId", quizId);
         ArrayList<Question> questions = DatabaseConnection.getQuestions(quizId);

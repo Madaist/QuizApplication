@@ -36,7 +36,7 @@
 
 <div class="button">
     <label for="answerQ1">Your answer (a/b/c/d): </label>
-    <input  type="text" placeholder="Enter your answer: " name="answerQ1" id = "answerQ1">
+    <input  type="text" placeholder="Enter your answer: " name="answerQ1" id = "answerQ1" required>
     <br>
 </div>
 
@@ -48,7 +48,7 @@
 
     <div class="button">
         <label for="answerQ2">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ2" id = "answerQ2">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ2" id = "answerQ2" required>
         <br><br>
     </div>
 
@@ -61,7 +61,7 @@
 
     <div class="button">
         <label for="answerQ3">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ3" id = "answerQ3">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ3" id = "answerQ3" required>
         <br><br>
     </div>
 
@@ -73,7 +73,7 @@
 
     <div class="button">
         <label for="answerQ4">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ4" id = "answerQ4">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ4" id = "answerQ4" required >
         <br><br>
     </div>
 
@@ -85,7 +85,7 @@
 
     <div class="button">
         <label for="answerQ1">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ5" id = "answerQ5">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ5" id = "answerQ5" required>
         <br><br>
     </div>
 
@@ -97,7 +97,7 @@
 
     <div class="button">
         <label for="answerQ1">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ6" id = "answerQ6">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ6" id = "answerQ6" required>
         <br><br>
     </div>
 
@@ -109,7 +109,7 @@
 
     <div class="button">
         <label for="answerQ7">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ7" id = "answerQ7">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ7" id = "answerQ7" required>
         <br><br>
     </div>
 
@@ -121,7 +121,7 @@
 
     <div class="button">
         <label for="answerQ8">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ8" id = "answerQ8">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ8" id = "answerQ8" required>
         <br><br>
     </div>
 
@@ -133,7 +133,7 @@
 
     <div class="button">
         <label for="answerQ9">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ9" id = "answerQ9">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ9" id = "answerQ9" required>
         <br><br>
     </div>
 
@@ -145,7 +145,7 @@
 
     <div class="button">
         <label for="answerQ10">Your answer (a/b/c/d): </label>
-        <input  type="text" placeholder="Enter your answer: " name="answerQ10" id = "answerQ10">
+        <input  type="text" placeholder="Enter your answer: " name="answerQ10" id = "answerQ10" required>
         <br><br>
     </div>
 

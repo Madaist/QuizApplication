@@ -115,21 +115,20 @@ public class DatabaseConnection {
         return null;
     }
 
-    public static  ArrayList<Integer> getQuizIdByDescription(String description){
-        ArrayList<Integer> quizzes = new ArrayList<>();
+    public static  int getQuizIdByDescription(String description){
+        int quizId = -1;
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectQuizIdByDescription)){
             statement.setString(1, description);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                int quizId = resultSet.getInt("ID");
-                quizzes.add(quizId);
+                 quizId = resultSet.getInt("ID");
             }
             resultSet.close();
             close();
         } catch (SQLException e){
             e.printStackTrace();
         }
-        return quizzes;
+        return quizId;
     }
 
     public static ArrayList<Integer> getQuizIdByCategory(int categoryId){

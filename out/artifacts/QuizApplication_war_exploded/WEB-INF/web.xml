@@ -114,4 +114,24 @@
         <url-pattern>/findQuizByName</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>FindQuizByDescriptionServlet</servlet-name>
+        <servlet-class>servlets.FindQuizByDescriptionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FindQuizByDescriptionServlet</servlet-name>
+        <url-pattern>/findQuizByDescription</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TakeQuizFromDescriptionServlet</servlet-name>
+        <servlet-class>servlets.TakeQuizFromDescriptionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TakeQuizFromDescriptionServlet</servlet-name>
+        <url-pattern>/takeQuizFromDescription</url-pattern>
+    </servlet-mapping>
+
 </web-app>
