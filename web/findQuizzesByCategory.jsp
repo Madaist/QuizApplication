@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<div>
+
 <h1>Category is: </h1>
  <div id="result1" class="result">
     <pre>
@@ -32,17 +32,29 @@
 
 <h1> Quizzes from the selected category are: </h1>
 <div id="result2" class="result">
+
     <pre>
         ${requestScope.quizzesByCategory}
     </pre>
-</div>
-
-<div class="button">
-    <label for="quizName">Enter the quiz name you want to take:  </label>
-    <input  type="text" placeholder="Enter quiz name" name="quizName" id = "quizName" required>
-</div>
 
 </div>
+
+<form action="http://localhost:8090/QuizApplication/findQuizByName" method="POST">
+    <div class="button">
+        <label for="quizName">Enter the quiz name you want to take:  </label>
+        <input  type="text" placeholder="Enter quiz name" name="quizName" id = "quizName">
+        <br>
+        <div>
+            <button class = "btn" type="submit" name="action">Start quiz</button>
+        </div>
+    </div>
+</form>
+
+    <div id="result" class="error">
+            <pre>
+                ${requestScope.error}
+            </pre>
+    </div>
 
 </body>
 </html>

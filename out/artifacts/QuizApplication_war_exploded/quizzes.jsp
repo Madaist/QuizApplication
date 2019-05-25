@@ -48,7 +48,7 @@
 
 
     <div class="container2">
-        <form method = "post" action = "findQuizByCategory.jsp">
+        <form method = "post" action = "findQuizByCategory">
             <div>
                 <label for="quizCategoryId">Find quiz by category ID: </label>
                 <input  type="text" placeholder="Enter category ID" name="quizCategoryId" id = "quizCategoryId">

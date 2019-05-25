@@ -32,12 +32,20 @@ body{
 .result{
     font-weight: bold;
     font-size: 15px;
+
+}
+
+.error{
+    font-weight: bold;
+    font-size: 15px;
+    text-align: right;
+    color: red;
 }
 
 .button{
     position: absolute;
     right: 3%;
-    top: 70%;
+    top: 55%;
     font-weight: bold;
     font-size: 20px;
 }

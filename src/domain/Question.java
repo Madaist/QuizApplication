@@ -58,4 +58,14 @@ public class Question {
     public void setQuizId(int quizId) {
         this.quizId = quizId;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(content + "\n");
+        for(int i = 0; i < answers.size()-1; i++)
+            stringBuilder.append(answers.get(i) + "\n");
+        stringBuilder.append("\n");
+        return stringBuilder.toString();
+    }
 }

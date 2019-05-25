@@ -50,7 +50,7 @@
 
     <servlet-mapping>
         <servlet-name>ShowQuizzesByCategoryServlet</servlet-name>
-        <url-pattern>/findQuizByCategory.jsp</url-pattern>
+        <url-pattern>/findQuizByCategory</url-pattern>
     </servlet-mapping>
 
 
@@ -64,5 +64,24 @@
         <url-pattern>/showDescriptions</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>FindQuizByNameServlet</servlet-name>
+        <servlet-class>servlets.FindQuizByNameServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FindQuizByNameServlet</servlet-name>
+        <url-pattern>/findQuizByName</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TakeQuizServlet</servlet-name>
+        <servlet-class>servlets.TakeQuizServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TakeQuizServlet</servlet-name>
+        <url-pattern>/takeQuiz</url-pattern>
+    </servlet-mapping>
 
 </web-app>
