@@ -84,4 +84,14 @@
         <url-pattern>/takeQuiz</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CalculateScoreServlet</servlet-name>
+        <servlet-class>servlets.CalculateScoreServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CalculateScoreServlet</servlet-name>
+        <url-pattern>/calculateScore</url-pattern>
+    </servlet-mapping>
+
 </web-app>

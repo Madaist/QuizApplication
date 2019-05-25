@@ -61,11 +61,21 @@ public class Question {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
+        /*StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(content + "\n");
         for(int i = 0; i < answers.size()-1; i++)
             stringBuilder.append(answers.get(i) + "\n");
-        stringBuilder.append("\n");
+        stringBuilder.append("\n\n\n");
+        return stringBuilder.toString(); */
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(content + "\n");
+        char letter = 'a';
+        for (int i = 0; i < answers.size() - 1; i++) {
+            stringBuilder.append(letter + ".  " + answers.get(i) + "\n");
+            letter++;
+        }
         return stringBuilder.toString();
+
     }
 }

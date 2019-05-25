@@ -1,6 +1,5 @@
 package services;
 
-
 import domain.Category;
 
 import java.util.ArrayList;
@@ -28,7 +27,6 @@ public class ShowQuizzesService {
             stringBuffer.append(desc + "\n        ");
         return stringBuffer;
     }
-
 
 
 }

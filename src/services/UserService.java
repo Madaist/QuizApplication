@@ -45,8 +45,9 @@ public class UserService {
     }
 
 
-    public static int calculateScore(int quizId) {
-        ArrayList<Question> questions = DatabaseConnection.getQuestions(quizId);
+    public static int calculateScore(ArrayList<Character> userAnswers,
+                                     ArrayList<Character> rightAnswers) {
+        /*ArrayList<Question> questions = DatabaseConnection.getQuestions(quizId);
         ArrayList<Character> userAnswers = new ArrayList<>();
         ArrayList<Character> correctAnswers = new ArrayList<>();
 
@@ -65,19 +66,29 @@ public class UserService {
             char answer = sc.next().charAt(0);
             userAnswers.add(answer);
         }
-
+            */
         int score = 0;
-        for(int i = 0; i < correctAnswers.size(); i++)
+        for(int i = 0; i < rightAnswers.size(); i++)
         {
-            if(correctAnswers.get(i).equals(userAnswers.get(i)))
-                score += questions.get(i).getScore();
+            if(rightAnswers.get(i).equals(userAnswers.get(i)))
+                score += (100 / rightAnswers.size());
         }
-
         return score;
     }
 
 
+    public static ArrayList<Character> rightAnswers(int quizId){
+        ArrayList<Question> questions = DatabaseConnection.getQuestions(quizId);
+        ArrayList<Character> rightAnswers = new ArrayList<>();
+        for(int i = 0; i < questions.size(); i++) {
+            int rightAnswerPosition = questions.get(i).getAnswers().size() -1;
+            rightAnswers.add(questions.get(i).getAnswers().get(rightAnswerPosition).charAt(0));
+        }
+        return  rightAnswers;
+    }
 
+
+/*
     public static void takeQuiz(HttpSession session) {
 
         int userId = (Integer)session.getAttribute("userId");
@@ -136,6 +147,6 @@ public class UserService {
                 break;
             }
         }
-    }
+    } */
 
 }
