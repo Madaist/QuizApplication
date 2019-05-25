@@ -65,13 +65,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>FindQuizByNameServlet</servlet-name>
-        <servlet-class>servlets.FindQuizByNameServlet</servlet-class>
+        <servlet-name>FindQuizByNameFromCategoriesServlet</servlet-name>
+        <servlet-class>servlets.FindQuizByNameFromCategoriesServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>FindQuizByNameServlet</servlet-name>
-        <url-pattern>/findQuizByName</url-pattern>
+        <servlet-name>FindQuizByNameFromCategoriesServlet</servlet-name>
+        <url-pattern>/findQuizByNameFromCategories</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -102,6 +102,16 @@
     <servlet-mapping>
         <servlet-name>SeeTopServlet</servlet-name>
         <url-pattern>/seeTop</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindQuizByNameServlet</servlet-name>
+        <servlet-class>servlets.FindQuizByNameServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FindQuizByNameServlet</servlet-name>
+        <url-pattern>/findQuizByName</url-pattern>
     </servlet-mapping>
 
 </web-app>

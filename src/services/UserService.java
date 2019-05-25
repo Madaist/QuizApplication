@@ -121,7 +121,6 @@ public class UserService {
         }
     }
 
-    //public static String getAnswerByLetter(char letter, int quizId){ }
 
 
 /*

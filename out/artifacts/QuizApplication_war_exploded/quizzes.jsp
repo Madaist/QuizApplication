@@ -25,7 +25,7 @@
 <div>
     <div class = "container1">
 
-        <form action="http://localhost:8090/QuizApplication/showNames" method="post">
+        <form action="http://localhost:8090/QuizApplication/showNames" method="POST">
         <input type="submit" value="Show the names of quizzes"/>
         </form>
 
@@ -88,10 +88,17 @@
             </div>
             <br><br>
         </form>
+
+        <div id="result" class="error">
+            <pre>
+                ${requestScope.error}
+            </pre>
+        </div>
     </div>
 
 
 </div>
+
 
 
 

@@ -39,7 +39,7 @@
 
 </div>
 
-<form action="http://localhost:8090/QuizApplication/findQuizByName" method="POST">
+<form action="http://localhost:8090/QuizApplication/findQuizByNameFromCategories" method="POST">
     <div class="button">
         <label for="quizName">Enter the quiz name you want to take:  </label>
         <input  type="text" placeholder="Enter quiz name" name="quizName" id = "quizName">

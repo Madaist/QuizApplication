@@ -7,11 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44808f08-bfaa-4465-8ea7-3cf9a01d90d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/servlets/FindQuizByNameFromCategoriesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/WEB-INF/classes/servlets/FindQuizByNameServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/findQuizzesByCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/findQuizzesByCategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/quizzes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/QuizApplication_war_exploded/quizzes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuizApplication/servlets/FindQuizByNameServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/CalculateScoreServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/CalculateScoreServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/calculateScore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/calculateScore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/calculateScore.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/calculateScore.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/quizzes.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/quizzes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/findQuizzesByCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/findQuizzesByCategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/quizzes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/quizzes.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +47,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlets/CalculateScoreServlet.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/quizzes.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="34" column="61" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="61" />
+            <state relative-caret-position="230">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/quizzes.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,31 +78,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+        <entry file="file://$PROJECT_DIR$/web/findQuizzesByCategory.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="97" column="52" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
-              <folding>
-                <element signature="e#3257#6169#0" />
-              </folding>
+            <state relative-caret-position="193">
+              <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="56" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/calculateScore.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/calculateScore.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="176">
+              <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -86,9 +100,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,16 +124,13 @@
         <option value="$PROJECT_DIR$/src/servlets/ShowNamesServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/ShowDescriptionsServlet.java" />
         <option value="$PROJECT_DIR$/src/dao/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/web/css/quizzes.css" />
         <option value="$PROJECT_DIR$/web/css/findQuizzesByCategory.jsp.css" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/servlets/ShowQuizzesByCategoryServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/ShowQuizByName.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/findQuizByName.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/takeQuiz.jsp" />
-        <option value="$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java" />
         <option value="$PROJECT_DIR$/web/css/findQuizzesByCategory.css" />
-        <option value="$PROJECT_DIR$/web/findQuizzesByCategory.jsp" />
         <option value="$PROJECT_DIR$/src/domain/Question.java" />
         <option value="$PROJECT_DIR$/web/css/takeQuiz.css" />
         <option value="$PROJECT_DIR$/src/servlets/HomeServlet.java" />
@@ -127,19 +138,24 @@
         <option value="$PROJECT_DIR$/web/css/mainPage.css" />
         <option value="$PROJECT_DIR$/src/servlets/TakeQuizServlet.java" />
         <option value="$PROJECT_DIR$/web/takeQuiz.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/domain/Score.java" />
         <option value="$PROJECT_DIR$/src/services/ShowQuizzesService.java" />
         <option value="$PROJECT_DIR$/src/servlets/SeeTopServlet.java" />
         <option value="$PROJECT_DIR$/web/css/seeTop.css" />
-        <option value="$PROJECT_DIR$/web/quizzes.jsp" />
         <option value="$PROJECT_DIR$/web/seeTop.jsp" />
         <option value="$PROJECT_DIR$/src/servlets/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/src/services/DatabaseData.java" />
         <option value="$PROJECT_DIR$/src/servlets/CalculateScoreServlet.java" />
         <option value="$PROJECT_DIR$/web/calculateScore.jsp" />
-        <option value="$PROJECT_DIR$/src/services/UserService.java" />
         <option value="$PROJECT_DIR$/web/css/calculateScore.css" />
+        <option value="$PROJECT_DIR$/src/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/FindQuizByNameFromCategoriesServlet.java" />
+        <option value="$PROJECT_DIR$/web/findQuizzesByCategory.jsp" />
+        <option value="$PROJECT_DIR$/src/servlets/FindQuizByName.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/css/quizzes.css" />
+        <option value="$PROJECT_DIR$/web/quizzes.jsp" />
       </list>
     </option>
   </component>
@@ -207,6 +223,12 @@
               <item name="QuizApplication" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuizApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuizApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="QuizApplication" type="b2602c69:ProjectViewProjectNode" />
@@ -357,16 +379,15 @@
       <workItem from="1558081237158" duration="5967000" />
       <workItem from="1558108040457" duration="12989000" />
       <workItem from="1558440754547" duration="2891000" />
-      <workItem from="1558786735129" duration="21489000" />
+      <workItem from="1558786735129" duration="22620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68875000" />
+    <option name="totallyTimeSpent" value="70006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1294" height="694" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25445706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -479,7 +500,7 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java</url>
+          <url>file://$PROJECT_DIR$/src/servlets/FindQuizByNameFromCategoriesServlet.java</url>
           <line>15</line>
           <properties />
           <option name="timeStamp" value="7" />
@@ -525,13 +546,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -669,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/TakeQuizServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -686,23 +690,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/ShowQuizzesByCategoryServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/findQuizzesByCategory.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -724,13 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="241" column="5" lean-forward="true" selection-start-line="241" selection-start-column="5" selection-end-line="241" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -778,20 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/quizzes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/quizzes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/takeQuiz.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -823,6 +789,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/calculateScore.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/calculateScore.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="99" column="35" lean-forward="true" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
+          <folding>
+            <element signature="e#3257#6169#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/CalculateScoreServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -833,27 +823,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/servlets/ShowQuizzesByCategoryServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="97" column="52" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
+        <state relative-caret-position="68">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#3257#6169#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/calculateScore.jsp">
+    <entry file="file://$PROJECT_DIR$/src/servlets/FindQuizByNameFromCategoriesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state relative-caret-position="74">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/calculateScore.css">
+    <entry file="file://$PROJECT_DIR$/web/findQuizzesByCategory.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="56" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/FindQuizByNameServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/quizzes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/quizzes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>

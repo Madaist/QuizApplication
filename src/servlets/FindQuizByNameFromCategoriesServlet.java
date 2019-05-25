@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class FindQuizByNameServlet extends HttpServlet {
+public class FindQuizByNameFromCategoriesServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,7 +21,7 @@ public class FindQuizByNameServlet extends HttpServlet {
         else {
             String error = "The name of the quiz is not valid";
             req.setAttribute("error", error);
-            req.getRequestDispatcher("/quizzes.jsp").forward(req, resp);
+           req.getRequestDispatcher("/findQuizzesByCategory.jsp").forward(req, resp);
         }
     }
 }

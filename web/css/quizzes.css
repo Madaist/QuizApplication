@@ -28,6 +28,11 @@ body{
     float: right;
 }
 
+.error{
+    color: red;
+    font-weight: bold;
+}
+
 /*
 .animated-gif{
 
