@@ -17,17 +17,18 @@
 
 <div class="hero-image">
     <div class="hero-text">
-        <h1 style="font-size:100px">Your score is: </h1>
+        <h1 style="font-size:50px">Your score is: ${requestScope.score} </h1>
     </div>
 </div>
 
 <div id="result" class="result">
     <pre>
-        ${requestScope.score}
+        ${requestScope.showRightAnswers}
     </pre>
 </div>
 
-<form action="http://localhost:8090/QuizApplication/seeTop">
+
+<form action="http://localhost:8090/QuizApplication/seeTop", method="post">
     <input type="submit" value="See top" />
 </form>
 

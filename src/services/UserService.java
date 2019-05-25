@@ -87,6 +87,42 @@ public class UserService {
         return  rightAnswers;
     }
 
+    public static String showRightAnswers(ArrayList<Character> userAnswers,
+                                          ArrayList<Character> rightAnswers,
+                                          int quizId){
+        ArrayList<Question> questions = DatabaseConnection.getQuestions(quizId);
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i = 0; i < userAnswers.size(); i++)
+        {
+            if(userAnswers.get(i) != rightAnswers.get(i)){
+                stringBuilder.append("Question: " + questions.get(i).getContent() + "\nYour answer was: ");
+                int position1 = poz(userAnswers.get(i));
+                if(position1 != -1)
+                    stringBuilder.append(questions.get(i).getAnswers().get(position1) + "\n");
+                else stringBuilder.append("You did not choose a valid answer\n");
+                stringBuilder.append("The right answer was: ");
+                int position2 = poz(rightAnswers.get(i));
+                stringBuilder.append(questions.get(i).getAnswers().get(position2) + "\n\n");
+
+            }
+        }
+        return  stringBuilder.toString();
+
+    }
+
+
+    public static int poz(char letter){
+       switch(letter){
+           case 'a': return 0;
+           case 'b': return 1;
+           case 'c': return 2;
+           case 'd': return 3;
+           default: return -1;
+        }
+    }
+
+    //public static String getAnswerByLetter(char letter, int quizId){ }
+
 
 /*
     public static void takeQuiz(HttpSession session) {

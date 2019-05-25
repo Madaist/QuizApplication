@@ -1,6 +1,7 @@
 package servlets;
 
 import dao.DatabaseConnection;
+import domain.User;
 import services.UserService;
 
 import javax.servlet.ServletException;
@@ -28,7 +29,10 @@ public class CalculateScoreServlet extends HttpServlet {
         int score = UserService.calculateScore(userAnswers, rightAnswers);
         DatabaseConnection.insertScore(score, userId, quizId);
 
+        String showRightAnswers = UserService.showRightAnswers(userAnswers, rightAnswers, quizId);
+
         req.setAttribute("score", score);
+        req.setAttribute("showRightAnswers", showRightAnswers);
         req.getRequestDispatcher("/calculateScore.jsp").forward(req, resp);
 
     }
