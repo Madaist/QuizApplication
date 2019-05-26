@@ -19,6 +19,13 @@ public class Question {
         this.answers = answers;
     }
 
+    public Question(String content, int score, ArrayList<String> answers, int quizId) {
+        this.content = content;
+        this.score = score;
+        this.answers = answers;
+        this.quizId = quizId;
+    }
+
     public int getQuestionID() {
         return questionID;
     }

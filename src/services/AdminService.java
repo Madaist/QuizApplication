@@ -31,6 +31,8 @@ public class AdminService {
         System.out.println("Insert quiz category: ");
         quiz.setCategoryId(sc.nextInt());
         sc.nextLine();
+
+
         System.out.println("Insert quiz description");
         quiz.setDescription(sc.nextLine());
 

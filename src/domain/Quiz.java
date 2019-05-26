@@ -57,4 +57,14 @@ public class Quiz {
     public void setQuizName(String quizName) {
         this.quizName = quizName;
     }
+
+    public Quiz(int numberOfQuestions, String description, int categoryId, String quizName) {
+        this.numberOfQuestions = numberOfQuestions;
+        this.description = description;
+        this.categoryId = categoryId;
+        this.quizName = quizName;
+    }
+
+    public Quiz() {
+    }
 }

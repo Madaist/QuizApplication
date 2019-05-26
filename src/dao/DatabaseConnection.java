@@ -304,9 +304,9 @@ public class DatabaseConnection {
         }
     }
 
-    public static void insertCategory(Category category) {
+    public static void insertCategory(String categoryName) {
         try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.insertCategory)) {
-            statement.setString(1, category.getName());
+            statement.setString(1, categoryName);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -330,6 +330,21 @@ public class DatabaseConnection {
             return  categories;
         }
 
+    public static ArrayList<String> selectCategoryNames () {
+        ArrayList<String> categories = new ArrayList<>();
+        try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectCategoryNames)) {
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                String categoryName = resultSet.getString("category_name");
+                categories.add(categoryName);
+            }
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  categories;
+    }
+
     public static String selectCategoryName (int categoryId) {
         String categoryName = null;
         try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectCategoryNameByCategoryId)) {
@@ -343,6 +358,21 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
         return  categoryName;
+    }
+
+    public static int selectCategoryId (String categoryName) {
+        int categoryId = 0;
+        try (PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectCategoryIdByName)) {
+            statement.setString(1, categoryName);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                categoryId = resultSet.getInt("category_id");
+            }
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  categoryId;
     }
 
 

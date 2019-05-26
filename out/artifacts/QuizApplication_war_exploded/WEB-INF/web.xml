@@ -144,4 +144,24 @@
         <url-pattern>/adminLogin</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CreateQuizPart1Servlet</servlet-name>
+        <servlet-class>servlets.CreateQuizPart1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateQuizPart1Servlet</servlet-name>
+        <url-pattern>/createQuizPart1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateQuizPart2Servlet</servlet-name>
+        <servlet-class>servlets.CreateQuizPart2Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateQuizPart2Servlet</servlet-name>
+        <url-pattern>/createQuiz</url-pattern>
+    </servlet-mapping>
+
 </web-app>
