@@ -39,8 +39,6 @@ public class UserService {
         if (!passwordLogin.equals(password))
             return "Password is not correct.\nPlease insert your password again.";
 
-       // User user = DatabaseConnection.selectUser(userLogin);
-        //session.setAttribute("userId", user.getID());
         return "Login successful";
     }
 

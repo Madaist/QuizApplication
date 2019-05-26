@@ -21,7 +21,7 @@ public interface DatabaseData {
     String selectQuizNames = "SELECT DISTINCT name FROM quiz";
     String selectQuizDescriptions = "SELECT description FROM quiz";
     String selectCategoryNameByCategoryId = "SELECT category_name FROM category WHERE category_id = ? ";
-
-
+    String selectAdminUsernames = "SELECT username FROM admins";
+    String selectAdminPassword = "SELECT password FROM admins where username = ?";
 
 }

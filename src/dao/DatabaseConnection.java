@@ -98,8 +98,42 @@ public class DatabaseConnection {
         return null;
     }
 
+    public static String getAdminPassword(String username){
+
+        try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectAdminPassword)){
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            String password = null;
+            if(resultSet.next())
+                password =  resultSet.getString("password");
+            resultSet.close();
+            close();
+            return password;
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static ArrayList<String> getAllUsernames(){
         try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectUsernames)){
+            ResultSet resultSet = statement.executeQuery();
+            ArrayList<String> usernames = new ArrayList<>();
+            while(resultSet.next()){
+                String username = resultSet.getString("username");
+                usernames.add(username);
+            }
+            resultSet.close();
+            close();
+            return usernames;
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ArrayList<String> getAdminUsernames(){
+        try(PreparedStatement statement = getConnection().prepareStatement(DatabaseData.selectAdminUsernames)){
             ResultSet resultSet = statement.executeQuery();
             ArrayList<String> usernames = new ArrayList<>();
             while(resultSet.next()){

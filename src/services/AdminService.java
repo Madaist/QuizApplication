@@ -9,6 +9,21 @@ import java.util.Scanner;
 
 public class AdminService {
 
+
+    public static String login(String adminLogin, String passwordLogin) {
+
+        ArrayList<String> usernames = DatabaseConnection.getAdminUsernames();
+        if(!usernames.contains(adminLogin)) {
+            return "Username is not correct.\nPlease insert your username again.";
+        }
+
+        String password = DatabaseConnection.getAdminPassword(adminLogin);
+        if (!passwordLogin.equals(password))
+            return "Password is not correct.\nPlease insert your password again.";
+
+        return "Login successful";
+    }
+
     public static void createQuiz(){
 
         Scanner sc = new Scanner(System.in);

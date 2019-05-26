@@ -30,9 +30,10 @@
         Do you feel lucky? <br>
         Login and have fun! </b></p>
 
-      <form method = "post" action = "home">
+
 
         <div class="container">
+          <form method = "post" action = "home">
           <div>
             <label for="username">Username: </label>
             <input  type="text" placeholder="Enter Username" name="username" id = "username" required >
@@ -46,9 +47,14 @@
           <div>
             <button class = "btn" type="submit" name="action">Login</button>
           </div>
-
-        </div>
       </form>
+
+          <br>
+          <form action="http://localhost:8090/QuizApplication/adminLogin.jsp">
+            <input type="submit" value="Login as administrator" />
+          </form>
+        </div>
+
     </div>
 
 
