@@ -28,6 +28,26 @@
 </div>
 
 
+<!--
+<select id="score", name="score">
+    <c:forEach score="${requestScope.top}" var="score" >
+        <option value = "${score.getScore()}"> ${score.getScore()} </option>
+    </c:forEach>
+
+</select>
+-->
+<!--
+<tbody>
+    <c:forEach items="${sessionScope.top}" var="sc">
+        <tr>
+            <td><c:out value="${sc.score}"/></td>
+            <td><c:out value="${sc.quizName}"/></td>
+
+        </tr>
+    </c:forEach>
+
+</tbody>
+-->
 
 </body>
 </html>

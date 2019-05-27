@@ -1,9 +1,9 @@
 package domain;
 
 public class Score {
-    private User user;
-    private int score;
-    private String quizName;
+    public User user;
+    public int score;
+    public String quizName;
 
     public Score(User user, int score, String quizName) {
         this.user = user;
@@ -37,7 +37,18 @@ public class Score {
 
     @Override
     public String toString() {
-        return user.getLastName() + " " + user.getFirstName() + "                   " +
-                quizName + "                    " + score + "\n";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(user.getLastName() + " " + user.getFirstName());
+        int space1 = 35 - stringBuilder.length();
+        for(int i = 0; i < space1; i++)
+            stringBuilder.append(" ");
+        stringBuilder.append(quizName);
+        int space2 = 65 - stringBuilder.length();
+        for(int i = 0; i < space2; i++)
+            stringBuilder.append(" ");
+        stringBuilder.append(score);
+        stringBuilder.append("\n");
+        return stringBuilder.toString();
+
     }
 }

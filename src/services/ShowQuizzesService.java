@@ -18,7 +18,7 @@ public class ShowQuizzesService {
     public static StringBuffer namesArrayToString(ArrayList<String> quizNames){
         StringBuffer stringBuffer = new StringBuffer();
         for(String name : quizNames)
-            stringBuffer.append(name + "\n        ");
+            stringBuffer.append(name + "\n                ");
         return stringBuffer;
     }
 
@@ -31,8 +31,10 @@ public class ShowQuizzesService {
 
     public static StringBuilder scoresArrayToString(ArrayList<Score> scores){
         StringBuilder stringBuilder = new StringBuilder();
-        for(Score score : scores)
+        for(Score score : scores) {
             stringBuilder.append(score);
+            stringBuilder.append("        ");
+        }
         return stringBuilder;
     }
 

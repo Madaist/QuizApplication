@@ -15,7 +15,7 @@ public class ShowDescriptionsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ArrayList<String> quizDescriptions = DatabaseConnection.selectQuizDescriptions();
-        req.setAttribute("descriptions", ShowQuizzesService.namesArrayToString(quizDescriptions));
+        req.setAttribute("descriptions", ShowQuizzesService.descriptionsArrayToString(quizDescriptions));
         req.getRequestDispatcher("/quizzes.jsp").forward(req, resp);
     }
 }

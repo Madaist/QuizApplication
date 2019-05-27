@@ -20,5 +20,6 @@ public class ShowCategoriesServlet extends HttpServlet {
         req.setAttribute("categories", ShowQuizzesService.categoryArrayToString(categories));
         req.getRequestDispatcher("/quizzes.jsp").forward(req, resp);
 
+
     }
 }

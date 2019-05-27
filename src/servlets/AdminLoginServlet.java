@@ -18,8 +18,6 @@ public class AdminLoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String loginStatus = AdminService.login(username, password );
-        //HttpSession session = req.getSession();
-        //session.setAttribute("userId", DatabaseConnection.selectUser(username).getID());
 
         if(loginStatus.equals("Login successful"))
             resp.sendRedirect("http://localhost:8090/QuizApplication/createQuiz.jsp");
